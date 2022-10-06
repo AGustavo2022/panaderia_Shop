@@ -9,12 +9,16 @@ const CartContextProvider = ({children}) => {
     const addItem = (product, qty) => {
         const flag = cartlist.find(item => item.id === product.id)
         if (flag === undefined){
-            product['cantidad'] = qty;
-            product['priceItem'] = product.price*product.cantidad;
-            setcartList([...cartlist,product]);
+            setcartList([...cartlist,
+                {
+                    id: product.id,
+                    title: product.title,
+                    pictureUrl: product.pictureUrl,
+                    price: product.price,
+                    cantidad: qty,
+            }]);
         }else{
-            product['cantidad'] += qty;
-            product['priceItem'] = product.price*product.cantidad;
+            flag.cantidad += qty;
             setcartList([...cartlist])
         }
     }
@@ -28,7 +32,9 @@ const CartContextProvider = ({children}) => {
     }
 
     const precioTotal = (cartlist) => {
-        const mapcartlist = cartlist.map(item => item.priceItem);
+        const mapcartlist = cartlist.map(item =>
+            item.priceItem = item.price*item.cantidad,       
+            );
         const result = mapcartlist.indexOf(mapcartlist[0]);
         if (result >= 0){
             return Math.round(mapcartlist.reduce((a, b) => a + b));
@@ -57,3 +63,15 @@ const CartContextProvider = ({children}) => {
 }
 
 export default CartContextProvider;
+
+
+// if (flag === undefined){
+//     product['cantidad'] = qty;
+//     product['priceItem'] = product.price*product.cantidad;
+//     setcartList([...cartlist,product]);
+// }else{
+//     product['cantidad'] += qty;
+//     product['priceItem'] = product.price*product.cantidad;
+//     setcartList([...cartlist])
+    
+// }

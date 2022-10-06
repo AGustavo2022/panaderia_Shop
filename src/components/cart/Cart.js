@@ -75,7 +75,7 @@ const Cart = () => {
                                     <button onClick={() => removelItem(item.id)} className=" col-2 btn btn-danger ms-3">Delete</button>
                                 </div>
                                 <div className="col-3">
-                                    <h5>SubTotal ${item.priceItem}</h5>
+                                    <h5>SubTotal ${item.price*item.cantidad}</h5>
                                     <h5>Cant: {item.cantidad}</h5>
                                 </div>
                                 <hr />
