@@ -6,6 +6,8 @@ En este proyecto se realiza una tienda online para una panaderia local integrand
 
 El cliente puede selecionar por categoria los productos o por orden alfabetico, ingresando al detalle de los mismos y dependiendo del stock podra seleccionar la cantidad de productos para agregarlo al carrito de compras y generar la orden de compra con sus detalles, cantidad de items, importe total de la compra.
 
+• Ver video del funcionamiento de [Panaderia-Shop](https://firebasestorage.googleapis.com/v0/b/panaderias-shop-34740.appspot.com/o/React%20App%20-%20Google%20Chrome%202022-10-06%2011-24-20.mp4?alt=media&token=7f0fe7f0-6c1b-496c-9c50-673a8abd27c6)
+
 
 ## Comenzando🚀
 
